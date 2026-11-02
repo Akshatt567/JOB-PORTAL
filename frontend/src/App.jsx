@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import FeaturePanel from "./featurePanel.jsx";
 import RecruiterDashboard from "./RecruiterDashboard.jsx";
-const API_URL = "http://localhost:5001";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5001";
 
 export default function App() {
   const [user, setUser] = useState(null);
